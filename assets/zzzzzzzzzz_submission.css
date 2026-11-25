@@ -1,0 +1,64 @@
+/* Final readability pass: keep the fixed single workspace; no additional charts. */
+.single-workspace .workspace-grid{grid-template-columns:clamp(244px,18.5vw,284px) minmax(0,1fr)!important;gap:10px!important}
+.single-workspace .workspace-body{grid-template-rows:54px minmax(0,1fr) 18px!important;gap:6px!important}
+.single-workspace .main-charts{grid-template-rows:minmax(0,1fr) minmax(0,1.07fr);gap:7px}
+.single-workspace .chart-header{min-height:40px;padding:5px 10px;gap:8px}
+.single-workspace .chart-header h2{font-size:16px;line-height:1.2;color:#193b51;font-weight:750}
+.single-workspace .chart-hint{font-size:12px;color:#496575;line-height:1.2}
+.single-workspace .stat-label{font-size:11px;color:#3f5e70}
+.single-workspace .stat-caption{font-size:11px;color:#4e6979}
+.single-workspace .stat-number{font-size:23px;line-height:1.15;font-variant-numeric:tabular-nums}
+.single-workspace .compact-legend{padding:3px 10px;min-height:25px;gap:6px 12px}
+.single-workspace .compact-legend .fuel-key,.single-workspace .pcp-inline-legend .fuel-key{font-size:12px;color:#365365;gap:5px}
+.single-workspace .selection-legend{font-size:12px;color:#244b60}
+.single-workspace .chart-footer{font-size:12px;line-height:1.15;color:#35576a;padding:4px 10px;min-height:21px}
+.single-workspace .compact-pcp-note{padding:3px 8px}
+.single-workspace .compact-pcp-note .pcp-coverage{gap:7px 13px}
+.single-workspace .compact-pcp-note .pcp-coverage-item{gap:5px;padding:0 3px!important}
+.single-workspace .compact-pcp-note .pcp-coverage-item span{font-size:10.5px;font-weight:600;color:#486476}
+.single-workspace .compact-pcp-note .pcp-coverage-item strong{font-size:13px;color:#1b4258;font-variant-numeric:tabular-nums}
+.single-workspace .method-footer{font-size:11px;color:#3e5f72}
+.single-workspace .filter-section .section-title{font-size:13px;color:#183d52}
+.single-workspace .filter-section .section-subtitle{font-size:11.5px;color:#536f80}
+.single-workspace .filter-groups .field-label{font-size:12.5px;color:#23465c}
+.single-workspace .filter-groups .field-hint{font-size:11.5px;color:#506d7e}
+.single-workspace .scenario-live-results{border-color:#c2dce3}
+.single-workspace .scenario-live-results .scenario-live-label{font-size:12.5px}
+.single-workspace .scenario-live-results .scenario-live-scope{font-size:11.5px}
+.single-workspace .scenario-live-results .scenario-counts strong{font-size:17px}
+.single-workspace .scenario-mini-summary{top:146px}
+.single-workspace .map-graph .maplibregl-map,.single-workspace .map-graph .maplibregl-canvas-container{background:#d5dadc}
+.single-workspace button:focus-visible,.single-workspace summary:focus-visible{outline:2px solid #167a94;outline-offset:2px}
+@media(max-height:780px){
+ .single-workspace .workspace-body{grid-template-rows:49px minmax(0,1fr) 15px!important;gap:5px!important}
+ .single-workspace .stats-grid{height:49px!important}
+ .single-workspace .stat-number{font-size:21px}
+ .single-workspace .chart-header{min-height:36px;padding:4px 9px}
+ .single-workspace .chart-header h2{font-size:15px}
+ .single-workspace .chart-hint{font-size:11px}
+ .single-workspace .compact-legend{padding:2px 9px;min-height:21px}
+ .single-workspace .compact-legend .fuel-key,.single-workspace .pcp-inline-legend .fuel-key,.single-workspace .selection-legend{font-size:11px}
+ .single-workspace .chart-footer{font-size:11px;padding:3px 9px;min-height:18px}
+ .single-workspace .compact-pcp-note{padding:2px 6px}
+ .single-workspace .compact-pcp-note .pcp-coverage-item span{font-size:10px}
+ .single-workspace .method-footer{font-size:10.5px}
+}
+@media(max-width:1150px){.single-workspace .chart-hint{display:none}.single-workspace .pcp-inline-legend{max-width:175px;gap:5px}.single-workspace .pcp-inline-legend .fuel-key{font-size:10px}.single-workspace .chart-actions{gap:4px}.single-workspace .compact-pcp-note .pcp-coverage{gap:4px}.single-workspace .compact-pcp-note .pcp-coverage-item span{font-size:10px}}
+/* Fit the KPI content without truncating either caption. */
+.single-workspace .stat-card{justify-content:center;padding:3px 12px!important}
+.single-workspace .stat-number{font-size:22px;line-height:1.08;margin:0!important}
+.single-workspace .stat-label,.single-workspace .stat-caption{line-height:1.12}
+.single-workspace .filter-head .sidebar-reset{font-size:10.5px;padding:6px 8px;min-height:31px}
+.single-workspace .scenario-mini-summary{top:156px}
+@media(max-height:780px){
+ .single-workspace .filter-head{height:62px!important;min-height:62px!important;padding:8px 10px!important}
+ .single-workspace .filter-sticky-search{top:62px!important;padding:7px 10px!important}
+ .single-workspace .filter-groups .filter-section>summary{padding:8px 12px;min-height:49px;gap:9px}
+ .single-workspace .filter-groups .filter-section>summary .section-icon{width:31px;height:31px;flex-basis:31px;border-radius:8px}
+ .single-workspace .filter-groups .filter-section>summary .section-chevron{width:23px;height:23px;flex-basis:23px}
+ .single-workspace .filter-section .section-subtitle{font-size:11px}
+ .single-workspace .scenario-mini-summary{top:142px}
+ .single-workspace .stat-card{padding:2px 10px!important}
+ .single-workspace .stat-number{font-size:20px}
+ .single-workspace .stat-label,.single-workspace .stat-caption{font-size:10.5px}
+}

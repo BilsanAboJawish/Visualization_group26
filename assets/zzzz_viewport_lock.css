@@ -1,0 +1,58 @@
+/* PlantScope viewport-lock hotfix (v2). Intentionally last asset: overrides any old
+   page max-width, sticky/flow layout, or min-height that creates document scrolling. */
+html, body, #react-entry-point, #_dash-app-content {
+  width:100% !important; height:100% !important; min-height:0 !important;
+  max-height:100% !important; margin:0 !important; overflow:hidden !important;
+}
+body {position:relative !important; overscroll-behavior:none;}
+.app-shell {
+  position:fixed !important; inset:0 !important;
+  width:100vw !important; height:var(--viewport-height,100dvh) !important;
+  min-height:0 !important; max-height:var(--viewport-height,100dvh) !important;
+  display:flex !important; flex-direction:column !important;
+  overflow:hidden !important; margin:0 !important;
+}
+.topbar {position:relative !important; top:0 !important;
+  flex-shrink:0 !important; width:100% !important; z-index:70;}
+.page {
+  flex:1 1 0 !important; width:100% !important; max-width:none !important;
+  height:auto !important; min-height:0 !important;
+  margin:0 !important; overflow:hidden !important;
+  display:flex !important; flex-direction:column !important;
+}
+.page-head {flex:0 0 auto !important;}
+.workspace-grid {
+  flex:1 1 0 !important; height:0 !important; min-height:0 !important;
+  max-height:100% !important; overflow:hidden !important;
+  align-items:stretch !important;
+}
+.workspace-body {height:100% !important; min-height:0 !important; overflow:hidden !important;}
+.stats-grid {flex-shrink:0 !important;}
+.filter-panel {
+  position:relative !important; top:auto !important;
+  height:100% !important; min-height:0 !important;
+  max-height:100% !important;
+  overflow-y:auto !important; overflow-x:hidden !important;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+}
+.filter-head {position:sticky !important;top:0 !important;z-index:12;}
+.filter-sticky-search {position:sticky !important;z-index:11;}
+.explorer-grid,.compare-view {
+  flex:1 1 0 !important; height:0 !important;
+  min-height:0 !important; overflow:hidden !important;
+  align-items:stretch !important;
+}
+.map-panel,.pcp-panel,.explorer-side,.compare-secondary {
+  min-height:0 !important; height:100% !important; overflow:hidden !important;
+}
+.inspector-body,.shortlist-cards,.choose-panel .lookup-content {
+  min-height:0 !important; overflow-y:auto !important;
+  overscroll-behavior:contain;
+}
+/* On normal laptop heights, prioritize the analytical canvas over page chrome. */
+@media (max-height: 820px) and (min-width: 900px) {
+  .page-head{margin-bottom:5px !important;}
+  .page-head .eyebrow,.page-head .subtitle{display:none !important;}
+  .page-head h1{font-size:19px !important;margin:0 !important;}
+}

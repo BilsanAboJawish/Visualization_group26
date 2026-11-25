@@ -1,0 +1,15 @@
+/* Compact live feedback while editing scenario thresholds. No new chart or page. */
+.single-workspace .scenario-mini-summary {margin:0 0 10px;}
+.single-workspace .scenario-live-results {background:#f5f9fb;border:1px solid #cfdee6;border-radius:8px;padding:9px 7px;color:#21465d;}
+.scenario-live-heading{display:flex;flex-direction:column;gap:2px;margin:0 2px 6px;}
+.scenario-live-label{font-size:12px;font-weight:750;color:#21465d;}
+.scenario-live-scope{font-size:11px;line-height:1.35;color:#496577;}
+.scenario-live-results .scenario-counts{margin:4px 0 6px;gap:3px;}
+.scenario-live-results .scenario-counts>div{background:#fff;border:1px solid #dce7ed;min-width:0;padding:5px 2px;}
+.scenario-live-results .scenario-counts strong{font-size:16px;font-variant-numeric:tabular-nums;}
+.scenario-live-results .scenario-counts span{font-size:10.5px;}
+.scenario-live-results .scenario-counts>div:nth-child(1) strong{color:#255f9a;}
+.scenario-live-results .scenario-counts>div:nth-child(2) strong{color:#95455f;}
+.scenario-live-results .scenario-counts>div:nth-child(3) strong{color:#147a70;}
+/* Keep result cards visible inside the scrollable sidebar while editing. */
+.single-workspace .scenario-mini-summary{position:sticky;top:152px;z-index:5;background:white;box-shadow:0 3px 5px #15374c0c;border-radius:8px;}

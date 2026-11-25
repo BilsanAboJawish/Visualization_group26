@@ -1,0 +1,17 @@
+/* Autocomplete preserves the compact sidebar and opens over filter sections. */
+.sidebar-search-control {display:block;min-height:38px;}
+.plant-autocomplete {width:100%;min-width:0;}
+.plant-autocomplete .Select-control,.plant-autocomplete .select__control {
+  min-height:40px!important;background:#f7fafc!important;border-radius:9px!important;
+  border-color:#ccdce5!important;
+}
+.plant-autocomplete .Select-menu-outer,.plant-autocomplete .select__menu {
+  z-index:1500!important;border-radius:9px!important;background:white!important;
+  box-shadow:0 8px 20px rgba(24,55,74,.16)!important;
+}
+.plant-autocomplete .VirtualizedSelectOption,.plant-autocomplete .Select-option,
+.plant-autocomplete .select__option {font-size:12px;line-height:1.35;white-space:normal;overflow-wrap:anywhere;}
+.plant-autocomplete .Select-value-label {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.filter-sticky-search:focus-within {z-index:30!important;}
+.choose-panel:focus-within {overflow:visible!important;position:relative;z-index:20;}
+.choose-panel:focus-within .lookup-content {overflow:visible!important;}
