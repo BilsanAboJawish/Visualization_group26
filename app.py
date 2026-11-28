@@ -1,4 +1,4 @@
-"""PlantScope | NGO fossil-plant screening dashboard.
+"""fossil atlas | NGO fossil-plant screening dashboard.
 
 Start: python app.py
 Requires the existing data/processed/power_plants_features.csv.
@@ -38,7 +38,7 @@ DEFAULT = {
 }
 
 app=Dash(__name__)
-app.title='PlantScope | Power plant analytics'
+app.title='Fossil Atlas | Power plant analytics'
 
 
 def field(label,content,description=None):
@@ -121,7 +121,7 @@ def block_title(eyebrow,title,tag=None):
 
 # All original sidebar filters, plus requested source and anomaly completeness filters.
 # =====================================================================
-# PlantScope Studio — professional workspaces; all callbacks keep stable IDs.
+# Fossil Atlas Studio — professional workspaces; all callbacks keep stable IDs.
 # =====================================================================
 
 
@@ -389,7 +389,7 @@ app.layout=html.Div(className='app-shell single-workspace',children=[
     dcc.Store(id='map-reset-token',data=0),dcc.Store(id='map-zoom-band',data=1.22),dcc.Store(id='active-drawer',data=None),
     dcc.Store(id='scenario-highlight',data={}),dcc.Download(id='download-shortlist'),dcc.Download(id='download-scenarios'),
     html.Header(className='topbar',children=[
-        html.Div([html.Div('P',className='brand-mark'),html.Div([html.Strong('PlantScope',className='brand-title'),html.Small('VISUAL DECISION SUPPORT',className='brand-subtitle')])],className='brand'),
+        html.Div([html.Div('P',className='brand-mark'),html.Div([html.Strong('Fossil Atlas',className='brand-title'),html.Small('VISUAL DECISION SUPPORT',className='brand-subtitle')])],className='brand'),
         html.Div([html.H1('Fossil power plant screening'),html.Span('WRI Global Power Plant Database · June 2021 historical release',className='source-caption')],className='workspace-title'),
         html.Div([tool_button('Inspect plant','open-inspect'),html.Button([html.Span('Shortlist'),html.Span('0',id='nav-shortlist-total',className='shortlist-badge')],id='open-shortlist',n_clicks=0,className='button button-outline tool-button'),html.Button('Export',id='export-shortlist',n_clicks=0,disabled=True,className='button nav-export',title='Export shortlist as CSV')],className='navbar-actions')]),
     html.Main(className='page',children=[html.Div(className='workspace-grid',children=[
@@ -1255,5 +1255,5 @@ def scenario_sidebar(year,*args):
 
 
 if __name__ == '__main__':
-    print(f'PlantScope ready: {len(BASE):,} plants in {BASE.country.nunique()} countries')
+    print(f'Fossil Atlas ready: {len(BASE):,} plants in {BASE.country.nunique()} countries')
     app.run(debug=False, host='127.0.0.1', port=8050)
